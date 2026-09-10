@@ -1,0 +1,41 @@
+name: Создать рабочую задачу
+description: Техническая, организационная или документальная задача
+title: "[Task]: "
+labels: ["task"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Контекст
+      description: Почему задача нужна сейчас?
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Что должно быть сделано?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Как проверить готовность?
+      placeholder: "- [ ] …\n- [ ] …"
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Приоритет
+      options:
+        - P0 — блокирует работу
+        - P1 — важно сделать в ближайшее время
+        - P2 — плановая задача
+        - P3 — улучшение без срочности
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Ответственный
+      description: GitHub-логин или роль; можно оставить «не назначен».
