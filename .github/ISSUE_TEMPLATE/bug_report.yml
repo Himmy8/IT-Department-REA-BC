@@ -1,0 +1,43 @@
+name: Сообщить об ошибке
+description: Если бот или другой компонент работает не так, как ожидалось
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Что произошло?
+      description: Опишите проблему простыми словами.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как повторить?
+      placeholder: "1. Открыть бота\n2. Нажать…\n3. Увидеть…"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Как должно работать?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Где возникла ошибка?
+      options:
+        - Telegram-бот
+        - Backend
+        - Google Sheets
+        - AI / GigaChat
+        - Документация
+        - Не уверен(а)
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Скриншоты и дополнительная информация
+      description: Не прикладывайте токены, персональные данные и закрытые таблицы.
