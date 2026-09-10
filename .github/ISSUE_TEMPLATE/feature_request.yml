@@ -1,0 +1,45 @@
+name: Предложить улучшение
+description: Новая функция или улучшение существующей
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Какую проблему решаем?
+      description: Для кого она важна и что сейчас неудобно?
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Желаемый результат
+      description: Опишите результат, а не только способ реализации.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Критерии готовности
+      placeholder: "- Пользователь может…\n- Данные появляются…\n- При ошибке бот сообщает…"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Основная область
+      options:
+        - Telegram-бот
+        - Backend
+        - Google Sheets
+        - AI / GigaChat
+        - Процесс команды
+        - Не уверен(а)
+    validations:
+      required: true
+  - type: checkboxes
+    id: design
+    attributes:
+      label: Дизайн
+      options:
+        - label: Для задачи нужен новый текст, экран, кнопка или визуальный сценарий
